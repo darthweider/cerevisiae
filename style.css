@@ -1,0 +1,43 @@
+body {
+background-color: #f6f6f6;
+font: Trebuchet;
+font-family: sans-serif;
+border-top-color: #a6aea1;
+text-decoration: none;
+} 
+
+h1 {
+	text-align:center;
+	font-size: 2.5em;
+}
+
+h2 {
+	text-align: left;
+	font-size: 1.875em;
+}
+
+p {
+	font-size: 0.875em;
+}
+
+ul {
+	text-align: center;
+	list-style-type:none;
+	position: relative; 
+	bottom: 10px;
+}
+
+a:link {}      /* unvisited link */
+a:visited {}  /* visited link */
+a:hover {}  /* mouse over link */
+a:active {}  /* selected link */ 
+
+.main {
+	text-align: center;
+	margin: 25px 400px 25px;	
+}
+
+.details {
+	border:4px groove gray;
+	margin: 10px 30px;
+}

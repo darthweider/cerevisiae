@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META http-equiv="Content-Style-Type" content="text/css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>About the Yeast Interactome Database </h1>
+
+
+<p><b>Queries.</b> Queries can be made for yeast genes based on their orf names, gene names, entrez ID, or SGD ID.
+<p><b>Results.</b> Possible interactors are listed at the top of the results page. Clicking on their names will bring you down to more detailed information about them: their Entrez ID and a link to their NCBI entry, various other names and IDs, chromosome number, protein-type (if known) and a description. From the detailed information page, you can also choose to search for interactors of that interactor.
+<p><b>Evidence.</b> In the detailed information section for each interactor, the evidence for the interaction is listed in the form of codes. The meaning of the codes can be found at <a href='./codes.html'>this page. The information is taken directly from the Yu Lab and <a href="http://hint.yulab.org/">HINT</a>.
+
+
+<p><b>Technical details.</b> The database is backed by MySQL databases of 1) yeast gene information and 2) interactions. The initial query is first passed through the information database to find the orf and gene name of the query. This is case-insensitive and ignores trailing whitespace. Both are used in searching the interactome to collect all possible interaction matches. The interactors are collected in a set to ensure that duplicates do not appear.
+<p>If the query does not match anything in the information database, an error is returned. If the query matches multiple items in the information database, all matches are returned. The user can choose which match they intended simply by clicking through. If no matches are found in the interaction database, a simple 'no interactions' page is returned.
+<p>Otherwise, the information for each interactor is collected. The gene names of all interactors for which information was found are displayed together for quick overview.
+<p>Then, detailed information is displayed for each one.
+<p>CSS and Javascript were employed in making this website.
+
+<p><b>Last update</b>May 2014.
+
+<ul>
+	<a href="./index.html">Home</a> | <a href="./about.html">About</a>
+</ul>

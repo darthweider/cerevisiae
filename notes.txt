@@ -1,0 +1,86 @@
+#head of html page 
+
+<link href="stylesheet" type="text/css" href="path.css" />
+
+
+
+#CSS
+selector/element {
+	property : value
+}
+
+eg
+
+body {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid;
+}
+
+h1,h2h3,h4,h5,h6 {
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+
+set permission of cgi-bin :
+chmod 755 cgi-bin/
+
+
+Idea with cgi is that you are printing out an HTML file from your python script.
+
+Simple CGI script:
+
+#!/usr/bin/python
+
+print "Content-type: text/html" 
+print
+
+import sys
+sys.stderr = sys.stdout #redirect error messages to stdout for easier debugging
+from cgi import FieldStorage
+import cgitb
+cgitb.enable() #makes debugging easier
+
+print "<html>"
+print "<body>"
+print "<h1>This is a test page.</h1>"
+
+#or
+
+print '''
+	<html>
+		<body>
+			<h1>
+				"hello"
+			</h1> </body> </html>'''
+
+
+
+
+Error log
+tail -25/var/loghttpd
+
+
+Save matlabplot images into a different directory from cgi-bin. Set that directory to permission 777.
+
+Use Google fonts to use.
+
+
+css
+#div1 {
+	float: left;
+	height: 283px;
+	width: 283px;
+	margin: 5px; #buffer of 5px around the image in the div	
+}
+
+
+<div id="div1">
+	img src="path.jpg"
+</div>
+
+<div id="div1">
+	img src="path2.jpg"
+</div>
+...
+

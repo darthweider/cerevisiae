@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META http-equiv="Content-Style-Type" content="text/css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Yeast Interactome Database </h1>
+
+<p>
+	<form name = "form" method ="GET" action="cgi-bin/lookup.cgi" onSubmit="return check()">
+		<td align="center">
+			<p>Enter the <i> S. cerevisiae</i> gene or protein of interest.
+			<p><input type="text" name="query">
+			<input type="submit" value="search">
+		</td>
+	</form>
+
+<script>
+function check() {
+	var q = document.forms["form"]["query"].value;
+	if (q == '' || q == null ) {
+		return false;
+	}
+	return true;
+}
+</script>
+
+<ul>
+	<a href="./index.html">Home</a> | <a href="./about.html">About</a>
+</ul>
+
+</body>
+</html>
